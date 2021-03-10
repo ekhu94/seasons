@@ -1,8 +1,8 @@
 import React from 'react';
 
-const SeasonDisplay = () => {
+const SeasonDisplay = props => {
     return (
-        <div>General Kenobi!</div>
+        <div>{ props.lat }</div>
     );
 };
 
