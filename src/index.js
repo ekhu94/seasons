@@ -25,7 +25,7 @@ class App extends React.Component {
         if (!errMsg && lat) {
             return <SeasonDisplay lat={ lat }/>
         }
-        return <Loader text="Loading...please wait" />;
+        return <Loader text="Please accept location request" />;
     }
 
 }
