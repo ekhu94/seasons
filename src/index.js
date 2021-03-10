@@ -13,21 +13,26 @@ class App extends React.Component {
         );
     }
 
-    render() {
+    renderContent() {
         const { lat, errMsg } = this.state;
         if (errMsg && !lat) {
             return (
                 <h2>
-                    The following error occurred: { this.state.errMsg }
+                    The following error occurred: { this.state.errMsg}
                 </h2>
             );
         }
         if (!errMsg && lat) {
-            return <SeasonDisplay lat={ lat }/>
+            return <SeasonDisplay lat={lat} />
         }
         return <Loader text="Please accept location request" />;
     }
 
+    render() {
+        return (
+            <div>{ this.renderContent() }</div>
+        );
+    }
 }
 
 ReactDOM.render(<App />, document.querySelector('#root'));
